@@ -1,3 +1,10 @@
-var MongoClient = require('mongodb').MongoClient;
 
+const mongoose = require("mongoose");
+class Mongoose {
+    Mongoose(){
 
+        
+    }
+}
+
+module.exports = mongoose;
