@@ -1,4 +1,4 @@
-var PORT = process.env.PORT || 3001; // take port from heroku or for loacalhost
+var PORT = process.env.PORT || 3000; // take port from heroku or for loacalhost
 var express = require("express");
 //var app = express(); // express app which is used boilerplate for HTTP
 //var http = require("http").Server(app);
