@@ -27,6 +27,7 @@
      text: "" //name + " stopped typing"
    });
  }
+
  // if key is pressed typing message is seen else auto after 2 sec typing false message is send
  // TODO : add broadcast event when server receives typing event
  $('#messagebox').keyup(function() {
