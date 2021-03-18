@@ -1,4 +1,4 @@
- var socket = io.connect('http://130.225.170.76:3001');
+ var socket = io.connect('http://130.225.170.76:3000');
  // listen for server connection
  // get query params from url
  var name = getQueryVariable("name") || 'Anonymous';
@@ -27,6 +27,27 @@
      text: "" //name + " stopped typing"
    });
  }
+
+function uploadFile(){
+  var fileData = {
+    //type: 144,
+   //parent_id: 485336,
+    name: "test",
+    file: "c:\\test.txt"
+  }
+  formData = new FormData();
+  formData.append("fileBody", JSON.stringify(fileData));
+
+  formData.append("file", "c:\\test.txt");
+  return $.ajax({
+    type: "POST",
+    url: "http://[http://130.225.170.76/chat.html",
+    data: fileData,
+  }).then(function(response){
+    alert("SUCCESS")
+  });
+}
+
  // if key is pressed typing message is seen else auto after 2 sec typing false message is send
  // TODO : add broadcast event when server receives typing event
  $('#messagebox').keyup(function() {
@@ -123,6 +144,8 @@
    $("ul.messages.list-group").animate({
      scrollTop: scrollLength - offset.top
    });
+
+
 
  });
 
